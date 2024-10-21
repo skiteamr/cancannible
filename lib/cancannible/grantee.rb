@@ -1,4 +1,5 @@
-module Cancannible::Grantee
+module Cancannible
+module Grantee
   extend ActiveSupport::Concern
 
   included do
@@ -98,6 +99,7 @@ module Cancannible::Grantee
   def cannot(ability, resource)
     permissions << [ability, resource, false]
   end
+end
 end
 
 module Cancannible
